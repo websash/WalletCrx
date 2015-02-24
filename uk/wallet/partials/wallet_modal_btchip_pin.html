@@ -5,7 +5,7 @@
         <hr>
         <form ng-submit="$close(pin)" name="form" class="form-horizontal">
             <div class="form-group" ng-class="{'has-error': state.error && form.$invalid}">
-                <label for="pinId" class="col-sm-5 control-label">Введіть Ваш PIN-код</label>
+                <label for="pinId" class="col-sm-5 control-label">Введіть ваш PIN-код</label>
                 <div class="col-sm-4">
                     <input clickfix focus-on="btchipPinModal" type="tel" mask-input class="form-control pin" required="required"
                            name="pin" maxlength="32" pattern="[0-9]{4,32}" ng-pattern="/[0-9]{4,32}/"
@@ -19,7 +19,7 @@
 
     <div class="modal-footer">
         <div class="">
-            <button ng-hide="pinNotCancelable" class="btn btn-danger" ng-click="$dismiss()" tabindex="3">Відмінити</button>
+            <button ng-hide="pinNotCancelable" class="btn btn-danger" ng-click="$dismiss()" tabindex="3">Скасувати</button>
             <button class="btn btn-primary" ng-click="submit_me()" tabindex="2" ng-focus="submit_me()">Підтвердити PIN-код</button
         </div>
     </div>

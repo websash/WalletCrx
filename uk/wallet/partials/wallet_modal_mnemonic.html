@@ -1,16 +1,16 @@
 <div class="modal-body text-center">
-    <p ng-hide="mnemonic_2of3">The QR code containing the passphrase to access your wallet is:</p>
-    <p ng-show="mnemonic_2of3">The QR code containing the passphrase for recovery access to your subaccount is:</p>
+    <p ng-hide="mnemonic_2of3">QR код, що містить фразу-пароль для доступу до вашого гаманця:</p>
+    <p ng-show="mnemonic_2of3">QR код, що містить фразу-пароль для відновлення доступу до вашого суб-акаунту:</p>
     <p><qr text="(( mnemonic_2of3 || mnemonic_encrypted || wallet.mnemonic ))" size="212"></qr></p>
     <p ng-show="mnemonic_encrypted">This passphrase is encrypted, so your encryption password is required to use it.</p>
     <p><b><i class="glyphicon glyphicon-exclamation-sign"></i> Зберігайте його в надійному місці!</b></p>
-    <p style="word-break: normal" ng-show="mnemonic_2of3"><b><i class="glyphicon glyphicon-exclamation-sign"></i> The subaccount mnemonic is not stored anywhere neither by GreenAddress, nor by your browser, so you *HAVE* to back it up to have a recovery access to your 2of3 subaccount.</b></p>
+    <p style="word-break: normal" ng-show="mnemonic_2of3"><b><i class="glyphicon glyphicon-exclamation-sign"></i> Мнемоніка для суб-акаунту не зберігається ані на боці GreenAddress, ані в вашому браузері, тому ви *МАЄТЕ* зберегти її щоб мати змогу відновити доступ до вашого суб-акаунту типу 2of3.</b></p>
 
     <div class="mnemonic-label">Ваша мнемонічна фраза-пароль</div>
     <div style="word-break: normal" class="mnemonic info" ng-bind="mnemonic_encrypted || wallet.mnemonic"></div>
 
     <div ng-show="mnemonic_2of3">
-        <div class="mnemonic-label"><br/>Your subaccount recovery mnemonic passphrase</div>
+        <div class="mnemonic-label"><br/>Ваша мнемонічна фраза-пароль для відновлення суб-акаунту</div>
         <div style="word-break: normal" class="mnemonic info" ng-bind="mnemonic_2of3"></div>
     </div>
 

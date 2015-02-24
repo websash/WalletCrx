@@ -19,10 +19,10 @@
 			<thead>
 				<th></th>
 				<th><a href="">Ім'я</a></th>
-				<th><a href="">Адрес</a></th>
+				<th><a href="">Адреса</a></th>
 				<th ng-show="wallet.hdwallet.priv || wallet.trezor_dev || wallet.btchip"></th>
 			</thead>
-	  
+
       <tfoot>
         <tr>
           <td colspan="5">
@@ -30,7 +30,7 @@
           </td>
         </tr>
       </tfoot>
-      
+
 			<tbody>
 				<!-- TODO: move to modal -->
 				<tr ng-show="addressbook.new_item" submittable>
@@ -45,21 +45,21 @@
 			                Сканувати QR код
 			                <input style="opacity: 0; position: absolute; left: 0; top: 0; width: 100%; height: 100%" type="file" id="qrcodeinput_login" accept="image/*" capture="camera" ga-click-no-touch="read_qr_code($event)">
 		                </span>
-		                <a class="btn btn-default" ng-show="scanning_qr_video" ng-click="stop_scanning_qr_code()">Відмінити</a>
+		                <a class="btn btn-default" ng-show="scanning_qr_video" ng-click="stop_scanning_qr_code()">Скасувати</a>
 		            </span>
 		        </span>
-	            
+
 		            <input class="ng-hide" type="file" id="qrcodeinput_addrbook" accept="image/*" capture="camera">
 		            <canvas id="qr-canvas" class="ng-hide"></canvas>
 		            <video ng-show="scanning_qr_video" id="v_addrbook" autoplay style="width: 100%;"></video>
-		        
+
 				<input type="submit" class="hide" submitter />
 				</form></td>
-				<td><form><a href="" class="btn btn-default" ng-click="submit_me()">Save</a></form></td>
+				<td><form><a href="" class="btn btn-default" ng-click="submit_me()">Зберегти</a></form></td>
 				</tr>
 				<tr ng-class="{danger: item.name == route.name}" submittable addressbook-item ng-repeat="item in addressbook.partitions[route.page-1][2]"></tr>
 				<tr ng-hide="addressbook.items.length || is_loading">
-					<td colspan="5"><small class="text-muted"><i>Ваша адресна книга пуста</i></small></td>
+					<td colspan="5"><small class="text-muted"><i>Ваша адресна книга порожня</i></small></td>
 				</tr>
 			</tbody>
 		</table>

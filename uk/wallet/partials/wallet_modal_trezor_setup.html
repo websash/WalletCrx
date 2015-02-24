@@ -15,7 +15,7 @@
     	<button type="button" class="btn btn-success" ng-click="trezor.store()" ng-hide="trezor.storing || !trezor.use_gait_mnemonic">Save to TREZOR</button>
         <button type="button" class="btn btn-success" ng-click="trezor.store()" ng-hide="trezor.use_gait_mnemonic" ng-disabled="trezor.setting_up">Set up TREZOR</button>
         <span class="btn btn-success disabled" ng-show="trezor.storing">
-           	Генерування ключів вашого гаманця, будь-ласка зачекайте ... (( trezor.seed_progress ))%
+           	Ґенерування ключів вашого гаманця, будь-ласка зачекайте ... (( trezor.seed_progress ))%
         </span>
     </div>
 	<div ng-show="trezor.gait_setup">
